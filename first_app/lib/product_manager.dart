@@ -28,7 +28,7 @@ class _ProductManagerState extends State<ProductManager> {
 
   @override
   void didUpdateWidget(ProductManager oldWidget) {
-    print("[ProductManager State] didUpdateState()2");
+    print("[ProductManager State] didUpdateState()");
     super.didUpdateWidget(oldWidget);
   }
 
@@ -39,6 +39,7 @@ class _ProductManagerState extends State<ProductManager> {
       Container(
         margin: EdgeInsets.all(10.0),
         child: RaisedButton(
+          color: Theme.of(context).primaryColor,
           onPressed: () {
             setState(() {
               _products.add("Advanced Food Tester");
