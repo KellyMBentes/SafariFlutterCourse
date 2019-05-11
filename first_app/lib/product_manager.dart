@@ -23,7 +23,7 @@ class _ProductManagerState extends State<ProductManager> {
   @override
   void initState() {
     print("[ProductManager State] initState()");
-    if(widget.startingProduct != null){
+    if (widget.startingProduct != null) {
       _products.add(widget.startingProduct);
     }
     super.initState();
