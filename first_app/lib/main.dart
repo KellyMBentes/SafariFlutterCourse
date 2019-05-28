@@ -52,14 +52,16 @@ class _MyAppState extends State<MyApp> {
       },
       onGenerateRoute: (RouteSettings settings) {
         final pathElements = settings.name.split("/");
-        if (pathElements[0] != null) {
+        if (pathElements[0] != "") {
           return null;
         }
         if (pathElements[1] == "product") {
           final int index = int.parse(pathElements[2]);
           return MaterialPageRoute<bool>(
             builder: (BuildContext context) => ProductPage(
-                _products[index]["title"], _products[index]["image"]),
+                  _products[index]["title"],
+                  _products[index]["image"],
+                ),
           );
         }
         return null;
